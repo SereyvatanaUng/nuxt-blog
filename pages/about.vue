@@ -6,9 +6,6 @@
 </template>
 
 <script setup>
-definePageMeta({
-  colorMode: "light",
-});
 function enableCustomLayout() {
   setPageLayout("another");
 }

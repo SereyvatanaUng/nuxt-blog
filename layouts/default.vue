@@ -1,12 +1,18 @@
 <template>
   <div class="container mx-auto max-w-2xl">
     <header class="flex justify-between items-center mt-5">
-      <div>
-        <NuxtLink to="/" class="text-xl font-semibold p-2 hover:bg-gray-200"
-          >Sereyvatana Ung</NuxtLink
-        >
+      <div class="flex items-center space-x-12">
+        <div>
+          <NuxtLink to="/" class="text-xl font-semibold p-2 hover:bg-gray-200"
+            >Sereyvatana Ung</NuxtLink
+          >
+        </div>
+        <Menu />
       </div>
-      <Menu />
+      <!-- Make sure everything inside ClientOnly are rendering on the Client not the server -->
+      <ClientOnly>
+        <ColorModeSelector />
+      </ClientOnly>
     </header>
 
     <main class="p-2 mt-10">
@@ -16,10 +22,6 @@
 </template>
 
 <script setup>
-const colorMode = useColorMode();
-colorMode.preference = "dark";
-console.log(colorMode.preference);
-
 useHead({
   titleTemplate: "%s - Sereyvatana Ung",
   link: [
