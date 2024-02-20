@@ -16,6 +16,10 @@
 </template>
 
 <script setup>
+const colorMode = useColorMode();
+colorMode.preference = "dark";
+console.log(colorMode.preference);
+
 useHead({
   titleTemplate: "%s - Sereyvatana Ung",
   link: [
@@ -35,5 +39,8 @@ useHead({
 <style>
 body {
   font-family: "Roboto";
+}
+body {
+  @apply bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300;
 }
 </style>
