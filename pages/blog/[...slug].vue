@@ -8,5 +8,4 @@
 
 <script setup>
 const route = useRoute();
-console.log(route.params.slug);
 </script>
