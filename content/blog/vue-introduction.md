@@ -6,6 +6,7 @@ head:
     - name: "og:image"
       content: /Vue.js_Logo_2.svg.png
 publishedAt: 2022-07-12 17:15:00
+toc: true
 ---
 
 # Introduction to Vue 3
