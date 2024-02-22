@@ -1,14 +1,8 @@
 <template>
-  <div>This is about page.</div>
-  <div>
-    <button @click="enableCustomLayout">Update layout</button>
-  </div>
+  <article>
+    <ContentDoc
+      path="/about"
+      class="prose dark:prose-invert prose-h1:text-2xlKO"
+    />
+  </article>
 </template>
-
-<script setup>
-function enableCustomLayout() {
-  setPageLayout("another");
-}
-
-useHead({ title: "About" });
-</script>
